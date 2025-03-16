@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DB Demo Form - MonProjetJEE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts for refined typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Header with navigation and hero section -->
+<header>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">MonProjetJEE</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Form.html">Register</a></li>
+        <li><a href="dbForm.html" class="active">DB Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>DB Demo Form</h1>
+      <p>Insert a new record into the database</p>
+    </div>
+  </div>
+</header>
+
+<!-- Main content: Form container -->
+<main>
+  <div class="container form-container">
+    <form action="dbDemo" method="post" class="styled-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" placeholder="Enter city">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit" class="btn">
+      </div>
+    </form>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 MonProjetJEE. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

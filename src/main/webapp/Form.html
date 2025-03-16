@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form - MonProjetJEE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts pour une typographie soignée -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <!-- Barre de navigation harmonisée avec index.html -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">MonProjetJEE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Form.html" class="active">Inscription</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Section Hero dédiée à la page de formulaire -->
+    <div class="hero hero-form">
+        <div class="hero-content">
+            <h1>Inscription</h1>
+            <p>Rejoignez notre plateforme pour découvrir les bases des Servlets en Java.</p>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="form-container container">
+        <form action="processForm" method="post" class="styled-form">
+            <div class="form-group">
+                <label for="civility">Civility:</label>
+                <select id="civility" name="civility" required>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mrs">Mrs.</option>
+                    <option value="Ms">Ms.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required placeholder="Your last name">
+            </div>
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required placeholder="Your first name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your email">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2025 MonProjetJEE. Tous droits réservés.</p>
+    </div>
+</footer>
+</body>
+</html>

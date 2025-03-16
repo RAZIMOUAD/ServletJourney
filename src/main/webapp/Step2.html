@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wizard - Step 2</title>
+  <!-- Lien vers votre fichier CSS global -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Optionnel : Bootstrap si nécessaire -->
+  <!--
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpe0Y1z2bMzP5h3kJLB3z2b5Ih7f0Uexj3S2fQgZyY6wyv3BM"
+        crossorigin="anonymous">
+  -->
+</head>
+<body class="bg-light">
+
+<!-- Header : Navigation et Hero -->
+<header>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">MonProjetJEE</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Form.html">Register</a></li>
+        <li><a href="dbForm.html">DB Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="hero hero-wizard">
+    <div class="hero-content">
+      <h1>Wizard - Step 2</h1>
+      <p>Please enter your address details.</p>
+    </div>
+  </div>
+</header>
+
+<!-- Contenu principal -->
+<main>
+  <section class="wizard-container container">
+
+    <!-- Barre de progression -->
+    <div class="progress mb-4" style="height: 25px;">
+      <div class="progress-bar" role="progressbar"
+           style="width: 66%;"
+           aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">
+        Step 2 of 3
+      </div>
+    </div>
+
+    <!-- Ligne d'étapes (wizard) -->
+    <div class="wizard-steps mb-4">
+      <div class="wizard-step completed">
+        <div class="wizard-step-number">1</div>
+        <div class="wizard-step-label">Personal Info</div>
+      </div>
+      <div class="wizard-step active">
+        <div class="wizard-step-number">2</div>
+        <div class="wizard-step-label">Address</div>
+      </div>
+      <div class="wizard-step">
+        <div class="wizard-step-number">3</div>
+        <div class="wizard-step-label">Summary</div>
+      </div>
+    </div>
+
+    <!-- Formulaire Step 2 -->
+    <div class="wizard-card">
+      <h2 class="wizard-title">Step 2: Address Info</h2>
+      <form action="step2" method="post">
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text"
+                 id="address"
+                 name="address"
+                 placeholder="123 Main St"
+                 required>
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text"
+                 id="city"
+                 name="city"
+                 placeholder="Your City"
+                 required>
+        </div>
+        <button type="submit" class="btn">Next &raquo;</button>
+      </form>
+    </div>
+
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 MonProjetJEE. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- (Optionnel) Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+ISzFDnKx/uoKcV1LfYAdB7H3+8k5"
+        crossorigin="anonymous"></script>
+-->
+</body>
+</html>

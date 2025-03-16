@@ -1,0 +1,304 @@
+/* css/style.css */
+
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de page global */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Conteneur central */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Barre de navigation */
+.navbar {
+    background: #4CAF50; /* Vert frais */
+    padding: 15px 0;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e0f7e9;
+}
+/* Section d'introduction */
+.intro {
+    padding: 60px 20px;
+    background: #e8f5e9; /* Fond vert très clair */
+    text-align: center;
+}
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2e7d32; /* Vert foncé pour le titre */
+}
+.intro p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Section des fonctionnalités */
+.features {
+    padding: 60px 20px;
+    background: #fff;
+}
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.feature-item {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    background: #f1f8e9; /* Fond très clair */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.feature-item h3 {
+    margin-bottom: 15px;
+    color: #388e3c;
+}
+.feature-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Section Call-to-Action */
+.cta-section {
+    padding: 60px 20px;
+    background: #f1f8e9; /* Même fond clair pour la cohérence */
+    text-align: center;
+}
+.cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+
+/* Section Hero commune */
+.hero {
+    background: linear-gradient(135deg, #4CAF50, #43A047); /* Dégradé vert printanier */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+.hero .hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+.hero .hero-content p {
+    font-size: 1.2em;
+}
+/* Wizard Hero section */
+.hero-wizard {
+    background: linear-gradient(135deg, #2e7d32, #4caf50);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+.hero-wizard .hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.hero-wizard .hero-content p {
+    font-size: 1.2em;
+}
+
+/* Wizard container */
+.wizard-container {
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+/* Wizard steps */
+.wizard-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.wizard-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    color: #999;
+}
+.wizard-step .wizard-step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #ccc;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.wizard-step.active .wizard-step-number {
+    background: #4caf50; /* Step en cours */
+}
+.wizard-step.completed .wizard-step-number {
+    background: #2e7d32; /* Step déjà terminé */
+}
+.wizard-step-label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.wizard-step::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    right: -50%;
+    height: 2px;
+    background: #ccc;
+    z-index: -1;
+}
+.wizard-step:last-child::after {
+    content: none;
+}
+
+/* Wizard card */
+.wizard-card {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.wizard-title {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.btn {
+    display: inline-block;
+    background: #4caf50;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #2e7d32;
+}
+
+/* Conteneur pour formulaires et confirmations */
+.form-container {
+    background: #fff;
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulaire stylé */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Boutons */
+.btn {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+.btn:hover {
+    background: #43A047;
+}
+
+/* Pied de page */
+footer {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
